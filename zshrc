@@ -201,6 +201,10 @@ update_prompt()
     if [ -n "$vcs_info_msg_0_" ]; then
         RPROMPT="${vcs_info_msg_0_}-${RPROMPT}"
     fi
+
+    # ターミナルのタイトルに接続情報等を表示
+    mycmd=(${(s: :)${1}})
+    echo -ne "\ek$(hostname|awk 'BEGIN{FS="."}{print $1}'):$mycmd[1]\e\\"
 }
 
 ## コマンド実行前に呼び出されるフック。
