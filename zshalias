@@ -1,0 +1,2 @@
+## git で pull をする
+alias gp="git pull"
