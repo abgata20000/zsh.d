@@ -395,9 +395,9 @@ update_title() {
     print -n -P " %n@%m:%~\a"
 }
 ## X環境上でだけウィンドウタイトルを変える。
-if [ -n "$DISPLAY" ]; then
+# if [ -n "$DISPLAY" ]; then
     preexec_functions=($preexec_functions update_title)
-fi
+# fi
 
 # node.js
 ## nvmを使っているなら有効にする
