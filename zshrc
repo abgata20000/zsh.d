@@ -365,6 +365,9 @@ alias enw="emacs -nw"
 ### 2011-11-06
 alias x="exit"
 
+## git で pull をする
+alias gp="git pull"
+
 ## カスタムaliasの設定
 ### ~/.zsh.d/zshalias → ~/.zshaliasの順に探して
 ### 最初に見つかったファイルを読み込む。
