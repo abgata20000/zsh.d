@@ -380,7 +380,7 @@ alias rag="rails g"
 
 alias ragm="rails g migration"
 
-ailas rad="rack db:rigrate"
+alias rad="rack db:rigrate"
 
 
 
