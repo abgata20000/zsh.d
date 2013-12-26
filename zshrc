@@ -368,6 +368,11 @@ alias x="exit"
 ## git で pull をする
 alias gp="git pull"
 
+alias gc="git clone"
+
+## sublimetext2 で開く
+alias st="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+
 ## カスタムaliasの設定
 ### ~/.zsh.d/zshalias → ~/.zshaliasの順に探して
 ### 最初に見つかったファイルを読み込む。
