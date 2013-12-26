@@ -373,6 +373,17 @@ alias gc="git clone"
 ## sublimetext2 で開く
 alias st="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
+## rails comamand
+alias ras="rails s"
+
+alias rag="rails g"
+
+alias ragm="rails g migration"
+
+ailas rad="rack db:rigrate"
+
+
+
 ## カスタムaliasの設定
 ### ~/.zsh.d/zshalias → ~/.zshaliasの順に探して
 ### 最初に見つかったファイルを読み込む。
