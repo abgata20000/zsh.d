@@ -383,6 +383,10 @@ alias ragm="rails g migration"
 alias rad="rake db:migrate"
 
 
+## ruby
+alias rb="ruby"
+
+
 
 ## カスタムaliasの設定
 ### ~/.zsh.d/zshalias → ~/.zshaliasの順に探して
