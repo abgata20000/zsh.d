@@ -433,3 +433,7 @@ nvm_sh=~/.nvm/nvm.sh
 if [ -f ${nvm_sh} ]; then
     source ${nvm_sh}
 fi
+
+#
+setopt nonomatch
+
