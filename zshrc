@@ -386,6 +386,9 @@ alias rad="rake db:migrate"
 ## ruby
 alias rb="ruby"
 
+##
+alias toc="cd ~/Dropbox/_CUSTOMERS"
+alias tod="cd ~/Dropbox"
 
 
 ## カスタムaliasの設定
