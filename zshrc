@@ -386,6 +386,18 @@ alias rad="rake db:migrate"
 ## ruby
 alias rb="ruby"
 
+## grunt
+alias g="grunt"
+
+## vagrant
+alias v="vagrant"
+
+## bundle
+alias be="bundle exec"
+alias bi="bundle install"
+alias bu="bundle update"
+
+
 ##
 alias c="cd ~/Dropbox/_CUSTOMERS"
 alias d="cd ~/Dropbox"
@@ -439,4 +451,3 @@ fi
 
 #
 setopt nonomatch
-
