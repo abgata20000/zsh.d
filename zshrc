@@ -370,8 +370,6 @@ alias gp="git pull"
 
 alias gc="git clone"
 
-## sublimetext2 で開く
-alias st="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 ## rails comamand
 alias ras="rails s"
@@ -396,12 +394,6 @@ alias v="vagrant"
 alias be="bundle exec"
 alias bi="bundle install"
 alias bu="bundle update"
-
-
-
-##
-alias c="cd ~/Dropbox/_CUSTOMERS"
-alias d="cd ~/Dropbox"
 
 
 ## カスタムaliasの設定
