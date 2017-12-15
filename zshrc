@@ -326,6 +326,29 @@ alias mv="mv -i"
 alias pd="pushd"
 alias po="popd"
 
+
+
+# 補完
+# for zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+# 補完機能を有効にする
+autoload -Uz compinit
+compinit -u
+
+# autojump
+# alias j="autojump"
+# if [ -f `brew --prefix`/etc/autojump ]; then
+#   . `brew --prefix`/etc/autojump
+# fi
+
+
+# z.sh
+if which brew > /dev/null; then
+  _Z_CMD=j
+  source $(brew --prefix)/etc/profile.d/z.sh
+fi
+
+
 ## lsとpsの設定
 ### ls: できるだけGNU lsを使う。
 ### ps: 自分関連のプロセスのみ表示。
@@ -368,7 +391,16 @@ alias x="exit"
 ## git で pull をする
 alias gp="git pull"
 
-alias gc="git clone"
+alias gc="git commit -a -m "
+
+alias gce="git commit --allow-empty -m "
+
+alias gpsh="git push"
+
+alias gpshf="git push -f"
+
+
+alias ghrk="git push heroku master"
 
 
 ## rails comamand
@@ -384,8 +416,11 @@ alias rad="rake db:migrate"
 ## ruby
 alias rb="ruby"
 
+## python
+alias py="python"
+
 ## grunt
-alias g="grunt"
+alias g="git"
 
 ## vagrant
 alias v="vagrant"
@@ -394,6 +429,9 @@ alias v="vagrant"
 alias be="bundle exec"
 alias bi="bundle install"
 alias bu="bundle update"
+
+# javac error
+# alias javac="javac -J-Dfile.encoding=UTF-8"
 
 
 ## カスタムaliasの設定
@@ -444,3 +482,5 @@ fi
 
 #
 setopt nonomatch
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PGDATA=/usr/local/var/postgres
