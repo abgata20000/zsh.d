@@ -377,13 +377,6 @@ case $(uname) in
         ;;
 esac
 
-## Emacsのショートカット。
-### 2011-11-06
-alias e="emacs &"
-### -nw: ターミナル内でEmacsを起動する。
-### 2011-11-06
-alias enw="emacs -nw"
-
 ## exitのショートカット。
 ### 2011-11-06
 alias x="exit"
@@ -393,25 +386,7 @@ alias gp="git pull"
 
 alias gc="git commit -a -m "
 
-alias gce="git commit --allow-empty -m "
-
-alias gpsh="git push"
-
-alias gpshf="git push -f"
-
-
-alias ghrk="git push heroku master"
-
-
-## rails comamand
-alias ras="rails s"
-
-alias rag="rails g"
-
-alias ragm="rails g migration"
-
-alias rad="rake db:migrate"
-
+alias ge="git commit --allow-empty -m "
 
 ## ruby
 alias rb="ruby"
@@ -427,7 +402,7 @@ alias v="vagrant"
 
 ## bundle
 alias be="bundle exec"
-alias bi="bundle install"
+alias bi="bundle install --jobs=4"
 alias bu="bundle update"
 
 # javac error
