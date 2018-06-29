@@ -406,7 +406,7 @@ alias bi="bundle install --jobs=4"
 alias bu="bundle update"
 
 # rubocop
-alias ru "bundle exec rubocop -a"
+alias ru="bundle exec rubocop -a"
 
 # javac error
 # alias javac="javac -J-Dfile.encoding=UTF-8"
