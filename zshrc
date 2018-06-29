@@ -405,6 +405,9 @@ alias be="bundle exec"
 alias bi="bundle install --jobs=4"
 alias bu="bundle update"
 
+# rubocop
+alias ru "bundle exec rubocop -a"
+
 # javac error
 # alias javac="javac -J-Dfile.encoding=UTF-8"
 
@@ -454,6 +457,15 @@ nvm_sh=~/.nvm/nvm.sh
 if [ -f ${nvm_sh} ]; then
     source ${nvm_sh}
 fi
+
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
 
 #
 setopt nonomatch
