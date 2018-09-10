@@ -388,6 +388,9 @@ alias gc="git commit -a -m "
 
 alias ge="git commit --allow-empty -m "
 
+## yarn  install
+alias yi="yarn install"
+
 ## ruby
 alias rb="ruby"
 
