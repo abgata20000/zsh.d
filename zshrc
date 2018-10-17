@@ -407,9 +407,12 @@ alias v="vagrant"
 alias be="bundle exec"
 alias bi="bundle install --jobs=4"
 alias bu="bundle update"
+alias by="bi && yi"
 
 # rubocop
 alias ru="bundle exec rubocop -a"
+alias es="yarn run eslint-fix"
+alias af="ru && es"
 
 # javac error
 # alias javac="javac -J-Dfile.encoding=UTF-8"
