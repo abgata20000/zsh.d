@@ -413,6 +413,8 @@ alias by="bi && yi"
 alias ru="bundle exec rubocop -a"
 alias es="yarn run eslint-fix"
 alias af="ru && es"
+alias ra="radirepo activity"
+alias ll="la"
 
 # javac error
 # alias javac="javac -J-Dfile.encoding=UTF-8"
