@@ -411,10 +411,12 @@ alias by="bi && yi"
 
 # rubocop
 alias ru="bundle exec rubocop -a"
+alias dru="docker-compose exec back bundle exec rubocop -a"
 alias es="yarn run eslint-fix"
 alias af="ru && es"
 alias ra="radirepo activity"
 alias ll="la"
+alias dc="docker-compose"
 
 # javac error
 # alias javac="javac -J-Dfile.encoding=UTF-8"
