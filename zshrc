@@ -397,8 +397,9 @@ alias rb="ruby"
 ## python
 alias py="python"
 
-## grunt
+## git
 alias g="git"
+alias gl="git log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s %Cred%d%Creset'"
 
 ## vagrant
 alias v="vagrant"
@@ -411,7 +412,9 @@ alias by="bi && yi"
 
 # rubocop
 alias ru="bundle exec rubocop -a"
-alias dru="docker-compose exec back bundle exec rubocop -a"
+alias dru="docker-compose exec app bundle exec rubocop -a"
+alias da="docker-compose exec app"
+alias dab="docker-compose exec app bundle exec"
 alias es="yarn run eslint-fix"
 alias af="ru && es"
 alias ra="radirepo activity"
