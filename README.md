@@ -4,7 +4,7 @@
 
 ## 使い方 ##
 
-	% git clone https://github.com/clear-code/zsh.d.git ~/.zsh.d
+	% git clone https://github.com/abgata20000/zsh.d.git ~/.zsh.d
 	% echo "source ~/.zsh.d/zshrc" > ~/.zshrc
 	% echo "source ~/.zsh.d/zshenv" > ~/.zshenv
 
