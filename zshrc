@@ -421,6 +421,13 @@ alias ra="radirepo activity"
 alias ll="la"
 alias dc="docker-compose"
 
+# lima
+alias lm="lima"
+alias lc="limactl"
+
+# maltipass
+alias mp="multipass"
+
 # javac error
 # alias javac="javac -J-Dfile.encoding=UTF-8"
 
