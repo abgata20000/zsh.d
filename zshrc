@@ -428,6 +428,8 @@ alias lc="limactl"
 
 # maltipass
 alias mp="multipass"
+# claude codeのauto modeをonして利用する
+alias claude="claude --enable-auto-mode"
 
 # javac error
 # alias javac="javac -J-Dfile.encoding=UTF-8"
