@@ -491,10 +491,10 @@ zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
 # claudeをtmuxで開く
-tclaude() {
+tm() {
 local session_name="claude-${PWD##*/}"
 if tmux has-session -t "$session_name" 2>/dev/null; then
-    tmux attach -t "$session_name"
+    tmux attach -d -t "$session_name"
 else
     tmux new-session -s "$session_name"
 fi
