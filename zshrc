@@ -100,7 +100,16 @@ zstyle ':vcs_info:*' actionformats \
 ###   %{%f%}: 文字の色を元に戻す。
 ###   %{%b%}: 太字を元に戻す。
 ###   %D{%Y/%m/%d %H:%M}: 日付。「年/月/日 時:分」というフォーマット。
-prompt_bar_left_self="(%{%B%}%n%{%b%}%{%F{cyan}%}@%{%f%}%{%B%}%m%{%b%})"
+### ホスト名の色をOS別に切り替える（Mac: デフォルト, Linux: 黄色背景黒文字）
+case "$(uname)" in
+    Linux)
+        _host_color="%{%B%F{black}%K{yellow}%}%m%{%k%f%b%}"
+        ;;
+    *)
+        _host_color="%{%B%}%m%{%b%}"
+        ;;
+esac
+prompt_bar_left_self="(%{%B%}%n%{%b%}%{%F{cyan}%}@%{%f%}${_host_color})"
 prompt_bar_left_status="(%{%B%F{white}%(?.%K{green}.%K{red})%}%?%{%k%f%b%})"
 prompt_bar_left_date="<%{%B%}%D{%Y/%m/%d %H:%M}%{%b%}>"
 prompt_bar_left="-${prompt_bar_left_self}-${prompt_bar_left_status}-${prompt_bar_left_date}-"
