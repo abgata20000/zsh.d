@@ -100,24 +100,26 @@ zstyle ':vcs_info:*' actionformats \
 ###   %{%f%}: 文字の色を元に戻す。
 ###   %{%b%}: 太字を元に戻す。
 ###   %D{%Y/%m/%d %H:%M}: 日付。「年/月/日 時:分」というフォーマット。
-### ホスト名の色をOS別に切り替える（Mac: デフォルト, Linux: 黄色背景黒文字）
+### プロンプトの色をOS別に切り替える（Mac: デフォルト, Linux: 黄色背景で視覚的に区別）
 case "$(uname)" in
     Linux)
+        _user_color="%{%B%F{black}%K{yellow}%}%n%{%k%f%b%}"
         _host_color="%{%B%F{black}%K{yellow}%}%m%{%k%f%b%}"
+        _dir_bg="cyan"
         ;;
     *)
+        _user_color="%{%B%}%n%{%b%}"
         _host_color="%{%B%}%m%{%b%}"
+        _dir_bg="magenta"
         ;;
 esac
-prompt_bar_left_self="(%{%B%}%n%{%b%}%{%F{cyan}%}@%{%f%}${_host_color})"
+prompt_bar_left_self="(${_user_color}%{%F{cyan}%}@%{%f%}${_host_color})"
 prompt_bar_left_status="(%{%B%F{white}%(?.%K{green}.%K{red})%}%?%{%k%f%b%})"
 prompt_bar_left_date="<%{%B%}%D{%Y/%m/%d %H:%M}%{%b%}>"
 prompt_bar_left="-${prompt_bar_left_self}-${prompt_bar_left_status}-${prompt_bar_left_date}-"
 ### プロンプトバーの右側
-###   %{%B%K{magenta}%F{white}%}...%{%f%k%b%}:
-###       「...」を太字のマゼンタ背景の白文字にする。
-###   %d: カレントディレクトリのフルパス（省略しない）
-prompt_bar_right="-[%{%B%K{magenta}%F{white}%}%d%{%f%k%b%}]-"
+###   ディレクトリのフルパスをOS別の背景色で表示
+prompt_bar_right="-[%{%B%K{${_dir_bg}}%F{white}%}%d%{%f%k%b%}]-"
 
 ### 2行目左にでるプロンプト。
 ###   %h: ヒストリ数。
@@ -194,7 +196,7 @@ update_prompt()
     #   %{%B%F{white}%K{green}}...%{%k%f%b%}:
     #       「...」を太字で緑背景の白文字にする。
     #   %~: カレントディレクトリのフルパス（可能なら「~」で省略する）
-    RPROMPT="[%{%B%F{white}%K{magenta}%}%~%{%k%f%b%}]"
+    RPROMPT="[%{%B%F{white}%K{${_dir_bg}}%}%~%{%k%f%b%}]"
     case "$TERM_PROGRAM" in
         Apple_Terminal)
             # Mac OS Xのターミナルでは$COLUMNSに右余白が含まれていないので
