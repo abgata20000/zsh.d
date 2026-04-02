@@ -440,7 +440,6 @@ alias lc="limactl"
 # maltipass
 alias mp="multipass"
 # claude code
-alias claude="claude --enable-auto-mode"
 alias c=claude
 
 # javac error
