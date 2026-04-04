@@ -338,7 +338,8 @@ alias pd="pushd"
 alias po="popd"
 # 古いサーバーへの接続用
 alias ssho="ssh -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedAlgorithms=ssh-dss,ssh-rsa"
-
+# ab-labへの接続
+alias ab="ssh ab-lab"
 
 # 補完
 # for zsh-completions
