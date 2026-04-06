@@ -340,6 +340,8 @@ alias po="popd"
 alias ssho="ssh -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedAlgorithms=ssh-dss,ssh-rsa"
 # ab-labへの接続
 alias ab="ssh ab-lab"
+alias t="tmux"
+alias ta="tmux attach -d || tmux new"
 
 # 補完
 # for zsh-completions
