@@ -342,6 +342,7 @@ alias ssho="ssh -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedAlgorithms=ssh-dss,
 alias ab="ssh ab-lab"
 alias t="tmux"
 alias ta="tmux attach -t"
+alias tn="tmux new-session -A -s"
 
 # 補完
 # for zsh-completions
