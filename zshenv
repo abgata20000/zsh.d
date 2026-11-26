@@ -193,6 +193,15 @@ done
 ## インストールされているので、あったら読み込む。
 [ -f /etc/profile.d/vte.sh ] && . /etc/profile.d/vte.sh
 
-# mise の shims（非対話シェル・SSH 経由でもツールを見つけられるようにする）
+# 非対話シェル・SSH 経由でもツールを見つけられるようにする。
 # 2026-08-12 追加: Claude Code デスクトップアプリの SSH セッション対応
-path=($HOME/.local/share/mise/shims(N-/) $path)
+# 2026-11-26 拡張: マシンごとにツールの置き場所が違うため候補をまとめて登録する。
+#   $HOME/.local/share/mise/shims : node / pnpm など（3 台共通）
+#   $HOME/.local/bin              : claude 公式インストーラ版（ablab-mac）
+#   /opt/homebrew/{bin,sbin}      : Homebrew 版 claude など（bg-air）
+# (N-/) 付きなので存在しないディレクトリは無視される。
+path=($HOME/.local/share/mise/shims(N-/)
+      $HOME/.local/bin(N-/)
+      /opt/homebrew/bin(N-/)
+      /opt/homebrew/sbin(N-/)
+      $path)
