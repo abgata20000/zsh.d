@@ -301,7 +301,10 @@ REPORTTIME=3
 ## 全てのユーザのログイン・ログアウトを監視する。
 watch="all"
 ## ログイン時にはすぐに表示する。
-log
+## macOS には log ビルトインが無く /usr/bin/log に落ちるのでガードする。
+if [[ "$(whence -w log 2>/dev/null)" == *builtin* ]]; then
+    log
+fi
 
 ## ^Dでログアウトしないようにする。
 setopt ignore_eof
