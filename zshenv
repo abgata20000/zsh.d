@@ -192,3 +192,7 @@ done
 ## これを実行するシェルスクリプトが/etc/profile.d/vte.shに
 ## インストールされているので、あったら読み込む。
 [ -f /etc/profile.d/vte.sh ] && . /etc/profile.d/vte.sh
+
+# mise の shims（非対話シェル・SSH 経由でもツールを見つけられるようにする）
+# 2026-08-12 追加: Claude Code デスクトップアプリの SSH セッション対応
+path=($HOME/.local/share/mise/shims(N-/) $path)
